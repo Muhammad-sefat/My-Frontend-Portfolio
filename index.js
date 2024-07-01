@@ -18,4 +18,7 @@ window.onscroll = () => {
       });
     }
   });
+  //   create sticky navbar
+  let header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 100);
 };
