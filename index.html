@@ -171,21 +171,21 @@
 
       <form action="#">
         <div class="input-box">
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Your Email" />
+          <input id="name" type="text" placeholder="Full Name" />
+          <input id="email" type="email" placeholder="Your Email" />
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Mobile Number" />
-          <input type="text" placeholder="Message Subject" />
+          <input id="phone" type="number" placeholder="Mobile Number" />
+          <input id="subject" type="text" placeholder="Message Subject" />
         </div>
         <textarea
           name=""
-          id=""
+          id="message"
           cols="30"
           rows="10"
           placeholder="Your Message"
         ></textarea>
-        <input type="text" type="submit" value="Send Message" class="btn" />
+        <button type="submit" class="btn">Send Message</button>
       </form>
     </section>
 
@@ -204,6 +204,10 @@
 
     <!-- Typed js -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- smptjs -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Script js -->
     <script src="index.js"></script>

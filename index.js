@@ -64,3 +64,39 @@ const typed = new Typed(".multiple-text", {
   backDelay: 1000,
   loop: true,
 });
+
+// smptjs
+const form = document.querySelector("form");
+const fullName = document.getElementById("name");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const subject = document.getElementById("subject");
+const message = document.getElementById("message");
+
+function sendEmail() {
+  const bodyMessage = `Full Name :${fullName.value}<br> Email:${email.value}<br> Phone:${phone.value}<br> Subject:${subject.value}<br> Message:${message.value}`;
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "muhammadsefat55@gmail.com",
+    Password: "7A2DC3CF82CC32378959926FDF8F12A90B17",
+    To: "muhammadsefat55@gmail.com",
+    From: "muhammadsefat55@gmail.com",
+    Subject: subject.value,
+    Body: bodyMessage,
+  }).then((message) => {
+    if (message == "OK") {
+      Swal.fire({
+        title: "Success",
+        text: "Message Sent Successfully",
+        icon: "success",
+      });
+    }
+  });
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendEmail();
+  form.reset();
+  return false;
+});
