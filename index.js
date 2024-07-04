@@ -37,8 +37,9 @@ window.onscroll = () => {
   navbar.classList.remove("active");
 };
 
+// scroll reavel
+
 ScrollReveal({
-  reset: true,
   distance: "80px",
   duration: 2000,
   delay: 200,
@@ -53,3 +54,13 @@ ScrollReveal().reveal(
 );
 ScrollReveal().reveal(".home-content h1, .about-image", { origin: "left" });
 ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
+
+// Typed js
+
+const typed = new Typed(".multiple-text", {
+  strings: ["Frontend Developer"],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true,
+});
